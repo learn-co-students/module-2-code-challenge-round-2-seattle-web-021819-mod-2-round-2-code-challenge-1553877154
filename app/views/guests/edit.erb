@@ -1,0 +1,12 @@
+<h1>Edit a Guest </h1>
+	<%= form_for @guest do |f| %>
+		<%= f.label :name %>
+		<%= f.number_field :name %>
+		<%= f.label :occupation %>
+		<%= f.number_field :occupation %>
+		<%= f.label :episode %>
+		<%= f.collection_select :episode.id, Episode.all, :id, :number %>
+		<%= f.label :rating %>
+		<%= f.number_field :rating%>
+		<%= f.submit %>
+	<% end %>
